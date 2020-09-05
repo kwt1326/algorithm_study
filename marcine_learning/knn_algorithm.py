@@ -1,1 +1,5 @@
-print('test')
+# KNN algorithm practice
+
+datas = {
+  
+}
