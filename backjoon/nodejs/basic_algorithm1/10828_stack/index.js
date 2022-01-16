@@ -1,47 +1,48 @@
 const fs = require('fs');
-// const inputData = fs.readFileSync(0, 'utf8').toString().split(' ');
-
-const path = require('path');
-const inputData = fs.readFileSync(path.resolve(__dirname, './dummy.txt'), 'utf8').toString().split('\n');
-
-console.log(inputData)
-
-const num = parseInt(inputData[0]);
+const input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
+// const input = fs.readFileSync("dummy.txt").toString().trim().split("\n");
 
 const stack = [];
+const logs = [];
 
-inputData.map((command, i) => {
+input.map((command, i) => {
   if (i > 0) {
     const _command = command.split(' ')[0];
+
     switch (_command) {
       case 'push':
         const _push_value = parseInt(command.split(' ')[1]);
-        stack.shift(_push_value)
+        stack.push(_push_value)
         break;
       case 'top':
         const _value = stack[stack.length - 1];
         if (_value) {
-          console.log(_value)
+          logs.push(_value)
           break;
         }
-        console.log(-1)
+        logs.push(-1)
         break;
       case 'pop':
         if (stack.length === 0) {
-          console.log(-1)
+          logs.push(-1)
           break;
         }
-        console.log(stack.pop());
+        logs.push(stack.pop());
         break;
       case 'empty':
         if (stack.length === 0) {
-          console.log(1)
+          logs.push(1)
           break;
         }
-        console.log(0)
+        logs.push(0)
+        break;
+      case 'size':
+        logs.push(stack.length)
         break;
       default:
         break;
     }
   }
 })
+
+console.log(logs.join('\n'));
