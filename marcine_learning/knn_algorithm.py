@@ -1,5 +1,0 @@
-# KNN algorithm practice
-
-datas = {
-  
-}
