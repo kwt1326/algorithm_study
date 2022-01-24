@@ -3,14 +3,12 @@
  */
 
 const fs = require('fs');
-const [input, ...arr] = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
-// const [input, ...arr] = fs.readFileSync("dummy.txt").toString().trim().split("\n");
-
+// const [input, ...arr] = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
+const [input, ...arr] = fs.readFileSync("dummy.txt").toString().trim().split("\n");
 const [nd, nl, start] = input.split(' ');
 
 const parseData = arr.map((v) => v.split(' ').map(_ => parseInt(_)));
-let visit1 = [false, ...Array(parseInt(nd)).fill('').map(_ => false)];
-let visit2 = [false, ...Array(parseInt(nd)).fill('').map(_ => false)];
+let visit = [false, ...Array(parseInt(nd)).fill('').map(_ => false)];
 let resultDFS = [], resultBFS = [];
 let queue = [];
 
@@ -60,6 +58,8 @@ function bfs(g, i, visit2) {
   }
 }
 
-dfs(graph, parseInt(start), visit1)
-bfs(graph, parseInt(start), visit2)
+dfs(graph, parseInt(start), visit)
+visit = visit.map(_ => false);
+bfs(graph, parseInt(start), visit)
+
 console.log(`${resultDFS.join(' ')}\n${resultBFS.join(' ')}`)
