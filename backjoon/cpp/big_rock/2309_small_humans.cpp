@@ -1,5 +1,5 @@
 /**
- * @file small_humans.cpp
+ * @file 2309_small_humans.cpp
  * @author wontae kim
  * @brief
  * backjoon - 2309
