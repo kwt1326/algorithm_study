@@ -37,8 +37,8 @@ fun main() = with(Scanner(System.`in`)) {
                         maze[x][y] = maze[node[0]][node[1]] + 1
 
                         // debug
-                        // val value = maze[x][y]
-                        // println("$x $y dep:$value")
+                         val value = maze[x][y]
+                         println("$x $y dep:$value")
 
                         queue.addLast(arrayOf(x, y))
                     }
