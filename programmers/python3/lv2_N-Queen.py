@@ -35,3 +35,27 @@ def solution(n):
                 visit[i] = False
     bt(0)
     return answer
+
+# 부분집합 생성 방식 풀이
+def solution(n):
+    answer = 0
+    col = [0] * n
+    dp1 = [0] * (n * 2)
+    dp2 = [0] * (n * 2)
+    
+    def bt(y):
+        nonlocal col, dp1, dp2, answer
+        if y == n:
+            answer += 1
+            return
+        for x in range(n):
+            if col[x] or dp1[x+y] or dp2[x-y + n-1]:
+                continue
+            # 부분집합 포함 후 재귀 호출
+            col[x] = dp1[x+y] = dp2[x-y + n-1] = 1
+            bt(y + 1)
+            # 재귀 호출 후 부분집합 선택 해제
+            col[x] = dp1[x+y] = dp2[x-y + n-1] = 0
+    
+    bt(0)
+    return answer
