@@ -2,7 +2,6 @@
 
 # Backtracking
 # N-Queen
-# 프로그래머스에서는 일반 DFS - Pre-order 방식으로 풀면 시간초과하여 DP 로 풀어야 함 (백준은 괜찮은 듯)
 def solution(n):
     answer = 0
     # 퀸 배치
@@ -59,3 +58,5 @@ def solution(n):
     
     bt(0)
     return answer
+
+print(solution(4)) # 2
