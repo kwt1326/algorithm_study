@@ -39,15 +39,4 @@ public class _232_implement_queue_using_stacks {
             }
         }
     }
-
-    public static void main(String[] args) {
-        Queue_ImplUsingStack<Integer> queue = new Queue_ImplUsingStack<>();
-        queue.push(1);
-        queue.push(2);
-        queue.push(3);
-
-        while (!queue.empty()) {
-            System.out.println(queue.pop()); // 1 2 3
-        }
-    }
 }

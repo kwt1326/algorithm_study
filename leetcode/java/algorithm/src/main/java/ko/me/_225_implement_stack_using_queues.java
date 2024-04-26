@@ -32,15 +32,4 @@ public class _225_implement_stack_using_queues {
             return queue.isEmpty();
         }
     }
-
-    public static void main(String[] args) {
-        Stack_ImplUsingQueue<Integer> stack = new Stack_ImplUsingQueue<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-
-        while (!stack.empty()) {
-            System.out.println(stack.pop()); // 3 2 1
-        }
-    }
 }
