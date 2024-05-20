@@ -41,7 +41,6 @@ public class _46_Permutations {
                 List.of(3,1,2),
                 List.of(3,2,1)
         );
-        permute(nums);
-        assert result.equals(accept);
+        assert permute(nums).equals(accept);
     }
 }
