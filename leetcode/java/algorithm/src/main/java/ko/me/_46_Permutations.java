@@ -4,6 +4,7 @@ import java.util.*;
 
 // DFS, 순열 구하기
 // C++ 의 경우 next_permutation 메서드가 std 라이브러리에 존재하지만, Java 에서는 직접 구현해야만 한다. (불편!) 하지만 비교적 간단하다.
+// https://leetcode.com/problems/permutations/description/
 public class _46_Permutations {
     private static final List<List<Integer>> result = new ArrayList<>();
 
