@@ -1,8 +1,7 @@
 package ko.me;
 
-import java.util.*;
-
-public class _lv2_대진표_
+// https://school.programmers.co.kr/learn/courses/30/lessons/12985
+public class _12985_lv2_예상_대진표_
 {
     public int solution(int n, int a, int b)
     {
