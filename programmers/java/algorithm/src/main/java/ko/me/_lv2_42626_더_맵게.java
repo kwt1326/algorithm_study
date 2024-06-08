@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 // 우선순위 큐로 쉽게 풀수 있는 문제
 // https://school.programmers.co.kr/learn/courses/30/lessons/42626
-public class _42626_더_맵게 {
+public class _lv2_42626_더_맵게 {
 
     public static int solution(int[] scoville, int K) {
         int answer = 0;

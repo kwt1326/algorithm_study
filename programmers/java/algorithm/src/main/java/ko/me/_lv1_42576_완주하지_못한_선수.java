@@ -5,7 +5,7 @@ import java.util.Objects;
 
 // 해시
 // https://school.programmers.co.kr/learn/courses/30/lessons/42576
-public class _42576_완주하지_못한_선수 {
+public class _lv1_42576_완주하지_못한_선수 {
     public static String solution(String[] participant, String[] completion) {
         String answer = "";
 
