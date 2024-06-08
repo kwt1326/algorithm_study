@@ -1,5 +1,5 @@
 path=$1
 javac "$path.java"
 java -ea "$path.java"
-rm "$path.class"
+find ./src/ -type f -name "*.class" -exec rm -f {} \;
 echo "Run Finish"
