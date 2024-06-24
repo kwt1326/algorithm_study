@@ -24,7 +24,7 @@ public class _EASY_226_Invert_Binary_Tree {
     }
 
     public static void main(String[] args) {
-        int[] array = {4,2,7,1,3,6,9};
+        Integer[] array = {4,2,7,1,3,6,9};
         TreeNode root = TreeNode.sortedArrayToBST(array);
         invertTree(root);
     }

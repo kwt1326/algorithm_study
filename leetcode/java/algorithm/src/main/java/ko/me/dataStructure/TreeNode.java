@@ -11,14 +11,14 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
-    TreeNode(final int val) {
+    public TreeNode(final int val) {
         this.val = val;
     }
 
-    TreeNode(
+    public TreeNode(
             final int val,
             final TreeNode left,
             final TreeNode right
@@ -43,7 +43,7 @@ public class TreeNode {
     }
 
     // 배열을 BST로 변환하는 메서드
-    public static TreeNode sortedArrayToBST(final int[] nums) {
+    public static TreeNode sortedArrayToBST(final Integer[] nums) {
         if (nums == null || nums.length == 0) {
             return null;
         }
@@ -69,9 +69,11 @@ public class TreeNode {
 
     //region Private Methods
     // 재귀적으로 노드를 삽입하는 메서드
-    private static TreeNode insertLevelOrder(final int[] arr, final int i) {
+    private static TreeNode insertLevelOrder(final Integer[] arr, final int i) {
         TreeNode root = null;
         if (i < arr.length) {
+            if (arr[i] == null) return null;
+
             root = new TreeNode(arr[i]);
             root.left = insertLevelOrder(arr, 2 * i + 1);
             root.right = insertLevelOrder(arr, 2 * i + 2);
